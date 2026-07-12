@@ -1,0 +1,65 @@
+{
+  "name": "Trip",
+  "type": "object",
+  "properties": {
+    "source": {
+      "type": "string",
+      "title": "Source"
+    },
+    "destination": {
+      "type": "string",
+      "title": "Destination"
+    },
+    "cargo_weight": {
+      "type": "number",
+      "title": "Cargo Weight (kg)"
+    },
+    "planned_distance": {
+      "type": "number",
+      "title": "Planned Distance (km)"
+    },
+    "vehicle_id": {
+      "type": "string",
+      "title": "Vehicle ID"
+    },
+    "driver_id": {
+      "type": "string",
+      "title": "Driver ID"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Pending",
+        "In Progress",
+        "Completed",
+        "Cancelled"
+      ],
+      "default": "Pending",
+      "title": "Status"
+    },
+    "revenue": {
+      "type": "number",
+      "title": "Revenue",
+      "default": 0
+    },
+    "dispatch_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Dispatch Date"
+    },
+    "completion_date": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Completion Date"
+    }
+  },
+  "required": [
+    "source",
+    "destination",
+    "cargo_weight",
+    "planned_distance",
+    "vehicle_id",
+    "driver_id",
+    "status"
+  ]
+}

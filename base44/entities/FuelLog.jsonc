@@ -1,0 +1,34 @@
+{
+  "name": "FuelLog",
+  "type": "object",
+  "properties": {
+    "vehicle_id": {
+      "type": "string",
+      "title": "Vehicle ID"
+    },
+    "liters": {
+      "type": "number",
+      "title": "Liters"
+    },
+    "unit_cost": {
+      "type": "number",
+      "title": "Unit Cost"
+    },
+    "total_cost": {
+      "type": "number",
+      "title": "Total Cost"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "title": "Date"
+    }
+  },
+  "required": [
+    "vehicle_id",
+    "liters",
+    "unit_cost",
+    "total_cost",
+    "date"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Expense",
+  "type": "object",
+  "properties": {
+    "vehicle_id": {
+      "type": "string",
+      "title": "Vehicle ID"
+    },
+    "trip_id": {
+      "type": "string",
+      "title": "Trip ID"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Toll",
+        "Driver Allowance",
+        "Parking",
+        "Insurance",
+        "Other"
+      ],
+      "title": "Category"
+    },
+    "amount": {
+      "type": "number",
+      "title": "Amount"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "title": "Date"
+    }
+  },
+  "required": [
+    "vehicle_id",
+    "category",
+    "amount",
+    "date"
+  ]
+}

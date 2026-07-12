@@ -1,0 +1,58 @@
+{
+  "name": "Driver",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "license_number": {
+      "type": "string",
+      "title": "License Number"
+    },
+    "license_category": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "title": "License Category"
+    },
+    "license_expiry": {
+      "type": "string",
+      "format": "date",
+      "title": "License Expiry Date"
+    },
+    "contact": {
+      "type": "string",
+      "title": "Contact Number"
+    },
+    "safety_score": {
+      "type": "number",
+      "title": "Safety Score",
+      "default": 100
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Available",
+        "On Trip",
+        "Off Duty",
+        "Suspended"
+      ],
+      "default": "Available",
+      "title": "Status"
+    }
+  },
+  "required": [
+    "name",
+    "license_number",
+    "license_category",
+    "license_expiry",
+    "contact",
+    "status"
+  ]
+}

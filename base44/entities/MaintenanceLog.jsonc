@@ -1,0 +1,48 @@
+{
+  "name": "MaintenanceLog",
+  "type": "object",
+  "properties": {
+    "vehicle_id": {
+      "type": "string",
+      "title": "Vehicle ID"
+    },
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "cost": {
+      "type": "number",
+      "title": "Cost",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Open",
+        "In Progress",
+        "Closed"
+      ],
+      "default": "Open",
+      "title": "Status"
+    },
+    "opened_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Opened Date"
+    },
+    "closed_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Closed Date"
+    }
+  },
+  "required": [
+    "vehicle_id",
+    "title",
+    "status"
+  ]
+}

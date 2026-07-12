@@ -1,0 +1,66 @@
+{
+  "name": "Vehicle",
+  "type": "object",
+  "properties": {
+    "registration_number": {
+      "type": "string",
+      "title": "Registration Number"
+    },
+    "model": {
+      "type": "string",
+      "title": "Model"
+    },
+    "vehicle_type": {
+      "type": "string",
+      "enum": [
+        "Van",
+        "Truck",
+        "Bus",
+        "SUV",
+        "Sedan"
+      ],
+      "title": "Vehicle Type"
+    },
+    "max_load_capacity": {
+      "type": "number",
+      "title": "Max Load Capacity (kg)"
+    },
+    "current_odometer": {
+      "type": "number",
+      "title": "Current Odometer (km)",
+      "default": 0
+    },
+    "acquisition_cost": {
+      "type": "number",
+      "title": "Acquisition Cost"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Available",
+        "On Trip",
+        "In Shop",
+        "Retired"
+      ],
+      "default": "Available",
+      "title": "Status"
+    },
+    "region": {
+      "type": "string",
+      "title": "Region"
+    },
+    "revenue_generated": {
+      "type": "number",
+      "title": "Revenue Generated",
+      "default": 0
+    }
+  },
+  "required": [
+    "registration_number",
+    "model",
+    "vehicle_type",
+    "max_load_capacity",
+    "acquisition_cost",
+    "status"
+  ]
+}
